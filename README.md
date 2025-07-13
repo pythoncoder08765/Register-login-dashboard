@@ -49,7 +49,7 @@ A modern, responsive mini web application built with HTML, CSS, and JavaScript. 
 
 ## Demo
 - **GitHub Pages Live Link**: _[Add your link here after deployment]_ 
-- **GitHub Repository**: _[Add your repo link here]_ 
+- **GitHub Repository**:https://github.com/pythoncoder08765/Register-login-dashboard 
 
 ---
 
