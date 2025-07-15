@@ -48,7 +48,7 @@ A modern, responsive mini web application built with HTML, CSS, and JavaScript. 
 5. Save and get your live URL (e.g., `https://username.github.io/registration-login-dashboard/register.html`).
 
 ## Demo
-- **GitHub Pages Live Link**:https://pythoncoder08765.github.io/Register-login-dashboard/ 
+- **GitHub Pages Live Link**:https://pythoncoder08765.github.io/Register-login-dashboard/register.html
 - **GitHub Repository**:https://github.com/pythoncoder08765/Register-login-dashboard 
 
 ---
