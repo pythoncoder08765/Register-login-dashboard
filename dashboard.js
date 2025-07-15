@@ -1,23 +1,24 @@
-const user = JSON.parse(localStorage.getItem('sessionUser'));
-if (!user) {
-  window.location.href = 'login.html';
+if (localStorage.getItem("session") !== "true") {
+  alert("Unauthorized access. Please login first.");
+  window.location.href = "login.html";
 }
 
-document.getElementById('userName').textContent = user.name;
-document.getElementById('userEmail').textContent = user.email;
-document.getElementById('userPhone').textContent = user.phone;
-document.getElementById('userGender').textContent = user.gender;
-document.getElementById('userDob').textContent = user.dob;
-document.getElementById('userAddress').textContent = user.address;
-document.getElementById('userCity').textContent = user.city;
-document.getElementById('userSkills').textContent = user.skills.join(', ');
-if (user.profilePic) {
-  document.getElementById('profilePic').src = user.profilePic;
-} else {
-  document.getElementById('profilePic').src = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(user.name);
+const user = JSON.parse(localStorage.getItem("user"));
+if (user) {
+  document.getElementById("userInfo").innerHTML = `
+    ${user.profilePic ? `<img src="${user.profilePic}" width="100" style="border-radius: 50%; margin-bottom: 10px;" />` : ""}
+    <p><strong>Name:</strong> ${user.name}</p>
+    <p><strong>Email:</strong> ${user.email}</p>
+    <p><strong>Phone:</strong> ${user.phone}</p>
+    <p><strong>Gender:</strong> ${user.gender}</p>
+    <p><strong>City:</strong> ${user.city}</p>
+    <p><strong>Skills:</strong> ${user.skills.filter(skill => skill && skill !== "on").join(", ")}</p>
+
+
+  `;
 }
 
-document.getElementById('logoutBtn').addEventListener('click', function() {
-  localStorage.removeItem('sessionUser');
-  window.location.href = 'login.html';
-}); 
+function logout() {
+  localStorage.removeItem("session");
+  window.location.href = "login.html";
+}
