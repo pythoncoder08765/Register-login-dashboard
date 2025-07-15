@@ -1,35 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header class="dashboard-header">
-        <h1><i class="fa fa-user-circle"></i> User Dashboard</h1>
-        <button id="logoutBtn" class="btn logout-btn"><i class="fa fa-sign-out-alt"></i> Logout</button>
-    </header>
-    <main class="dashboard-main">
-        <div class="dashboard-card">
-            <div class="profile-section">
-                <img id="profilePic" class="profile-pic" src="" alt="Profile Picture" />
-                <h2 id="userName">User</h2>
-                <span class="user-email"><i class="fa fa-envelope"></i> <span id="userEmail"></span></span>
-            </div>
-            <div class="user-details">
-                <div class="detail-row"><i class="fa fa-phone"></i> <strong>Phone:</strong> <span id="userPhone"></span></div>
-                <div class="detail-row"><i class="fa fa-venus-mars"></i> <strong>Gender:</strong> <span id="userGender"></span></div>
-                <div class="detail-row"><i class="fa fa-birthday-cake"></i> <strong>Date of Birth:</strong> <span id="userDob"></span></div>
-                <div class="detail-row"><i class="fa fa-map-marker-alt"></i> <strong>Address:</strong> <span id="userAddress"></span></div>
-                <div class="detail-row"><i class="fa fa-city"></i> <strong>City:</strong> <span id="userCity"></span></div>
-                <div class="detail-row"><i class="fa fa-code"></i> <strong>Skills:</strong> <span id="userSkills"></span></div>
-            </div>
-        </div>
-    </main>
-    <script src="dashboard.js"></script>
+  <div class="container">
+    <h2>Dashboard</h2>
+    <div id="userInfo"></div>
+    <button onclick="logout()" style="width: 100%; margin-top: 20px;">Logout</button>
+  </div>
+  <script src="js/dashboard.js"></script>
 </body>
-</html> 
+</html>
